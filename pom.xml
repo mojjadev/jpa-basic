@@ -20,7 +20,13 @@
             <artifactId>postgresql</artifactId>
             <version>42.3.3</version>
         </dependency>
-    <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
         <!--<dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
