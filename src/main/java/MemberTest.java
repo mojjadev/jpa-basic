@@ -1,9 +1,16 @@
+import net.bytebuddy.description.type.TypeList;
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.boot.model.naming.Identifier;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class MemberTest {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

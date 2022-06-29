@@ -14,10 +14,20 @@ public class JpaMain {
 
         try {
             MemberTest mt = new MemberTest();
-            mt.setId(1L);
+            //mt.setId(1L);
             mt.setName("나야나");
 
+            MemberTest mt2 = new MemberTest();
+            //mt.setId(1L);
+            mt2.setName("나야나1");
+
+            MemberTest mt3 = new MemberTest();
+            //mt.setId(1L);
+            mt3.setName("나야나2");
+
             em.persist(mt);
+            em.persist(mt2);
+            em.persist(mt3);
             tx.commit();
         }catch (Exception e){
             tx.rollback();
