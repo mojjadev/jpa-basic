@@ -18,22 +18,25 @@ public class JpaMain {
             team.setTeamName("우리 민족");
 
             em.persist(team);
+            em.flush();
+            em.clear();
 
+            Team findTeam = em.find(Team.class, team.getTeamId());
 
             MemberTest mt = new MemberTest();
             //mt.setId(1L);
-            mt.setTeam(team);
+            mt.setTeam(findTeam);
             mt.setName("나야나");
 
             MemberTest mt2 = new MemberTest();
             //mt.setId(1L);
             mt2.setName("나야나1");
-            mt2.setTeam(team);
+            mt2.setTeam(findTeam);
 
             MemberTest mt3 = new MemberTest();
             //mt.setId(1L);
             mt3.setName("나야나2");
-            mt3.setTeam(team);
+            mt3.setTeam(findTeam);
 
             em.persist(mt);
             em.persist(mt2);
